@@ -1,0 +1,26 @@
+{
+  "name": "18.1",
+  "version": "1.0.0",
+  "description": "Kodilla task 18 - A simple Chat app, frontend, backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arti-zachara/18.1-Chat-app.git"
+  },
+  "keywords": [
+    "chat",
+    "practice",
+    "ux",
+    "ui",
+    "server"
+  ],
+  "author": "arti Zachara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arti-zachara/18.1-Chat-app/issues"
+  },
+  "homepage": "https://github.com/arti-zachara/18.1-Chat-app#readme"
+}
