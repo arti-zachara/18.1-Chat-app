@@ -4,6 +4,8 @@
   "description": "Kodilla task 18 - A simple Chat app, frontend, backend",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --env production",
+    "start": "webpack-dev-server --hot --env development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
