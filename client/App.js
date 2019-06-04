@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import io from "socket.io-client";
+import styles from "./App.css";
+import MessageForm from "./MessageForm";
+import MessageList from "./MessageList";
+import UsersList from "./UsersList";
+import UserForm from "./UserForm";
 // ------ imports ------------------------
 
 const socket = io("/");
@@ -10,6 +15,36 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { users: [], messages: [], text: "", name: "" };
+  }
+
+  // ----- listening ------------------------
+  componentDidMount() {
+    // handle posting message
+    socket.on("message", message => this.messageReceive(message));
+    // handle update of users list
+    socket.on("update", ({ users }) => this.chatUpdate(users));
+  }
+
+  // ----- methods -------------------------------
+  // ----- receiving:
+  messageReceive(message) {
+    const messages = [message, ...this.state.messages];
+    this.setState({ messages });
+  }
+
+  chatUpdate(users) {
+    this.setState({ users });
+  }
+  // ----- submitting:
+  handleMessageSubmit(message) {
+    const messages = [message, ...this.state.messages];
+    this.setState({ messages });
+    socket.emit("message", message);
+  }
+
+  handleUserSubmit(name) {
+    this.setState({ name });
+    socket.emit("join", name);
   }
 
   // ----- render ------------------------
