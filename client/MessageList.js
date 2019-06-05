@@ -6,8 +6,8 @@ import styles from "./MessageList.css";
 // presentation component - function(props) - render, not render()
 const Message = props => (
   <div className={styles.Message}>
-    <strong> {props.from} :</strong>
-    <span> {props.text}</span>
+    <strong> {props.from}: </strong>
+    <span>{props.text}</span>
   </div>
 );
 
