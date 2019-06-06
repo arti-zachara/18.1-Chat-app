@@ -1,0 +1,23 @@
+.userForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+}
+.userFormLabel {
+  margin: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+}
+.userInput {
+  padding: 15px;
+  font-size: 1.5em;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #ccc;
+  width: 400px;
+  max-width: 80vw;
+}
