@@ -5,7 +5,7 @@ import styles from "./MessageList.css";
 // ----- Message --------------------------------------------
 // presentation component - function(props) - render, not render()
 const Message = props => (
-  <div className={styles.Message}>
+  <div className={styles.message}>
     <strong> {props.from}: </strong>
     <span>{props.text}</span>
   </div>
@@ -14,7 +14,7 @@ const Message = props => (
 // ----- MessageList --------------------------------------------
 // presentation component - function(props) - render, not render()
 const MessageList = props => (
-  <div className={styles.MessageList}>
+  <div className={styles.messageList}>
     {props.messages.map((message, i) => {
       return <Message key={i} from={message.from} text={message.text} />;
     })}

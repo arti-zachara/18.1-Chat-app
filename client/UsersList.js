@@ -4,12 +4,12 @@ import styles from "./UsersList.css";
 
 // presentation component - function(props) - render, not render()
 const UsersList = props => (
-  <div className={styles.Users}>
-    <div className={styles.UsersOnline}>{props.users.length} people online</div>
-    <ul className={styles.UsersList}>
+  <div className={styles.users}>
+    <div className={styles.usersOnline}>{props.users.length} people online</div>
+    <ul className={styles.usersList}>
       {props.users.map(user => {
         return (
-          <li key={user.id} className={styles.UserItem}>
+          <li key={user.id} className={styles.userItem}>
             {user.name}
           </li>
         );

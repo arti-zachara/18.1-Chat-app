@@ -1,4 +1,4 @@
-.UserForm {
+.userForm {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,13 +7,13 @@
   height: 100vh;
   background-color: aliceblue;
 }
-.UserFormLabel {
+.userFormLabel {
   margin: 20px;
   text-align: center;
   font-size: 1.2rem;
   font-family: Arial, sans-serif;
 }
-.UserInput {
+.userInput {
   padding: 15px;
   font-size: 1.5em;
   border: 1px solid #eee;

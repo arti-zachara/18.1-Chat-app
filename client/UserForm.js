@@ -19,12 +19,12 @@ class UserForm extends Component {
 
   render() {
     return (
-      <form className={styles.UserForm} onSubmit={e => this.handleSubmit(e)}>
-        <div className={styles.UserFormLabel}>
+      <form className={styles.userForm} onSubmit={e => this.handleSubmit(e)}>
+        <div className={styles.userFormLabel}>
           Please, write your nickname and press enter
         </div>
         <input
-          className={styles.UserInput}
+          className={styles.userInput}
           placeholder="Your nickname"
           onChange={e => this.handleChange(e)}
           value={this.state.name}
